@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: rgba(44, 62, 80, 0.8); 
+            padding: 10px 0;
+            text-align: center;
+            color: white; 
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px; 
+        }
+        footer {
+            background-color: rgba(44, 62, 80, 0.8); 
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            color: white; 
+        }
+        .graphs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .graph-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+        }
+        .graph-container img {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .graph-container canvas {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: white; 
+            text-decoration: none;
+        }
+        aside {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px; 
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="Logo" class="logo">CryptoTracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <h2>Cryptocurrencies</h2>
+        <ul>
+            <li><a href="#">Bitcoin</a></li>
+            <li><a href="#">Ethereum</a></li>
+            <li><a href="#">Ripple</a></li>
+            <li><a href="#">Litecoin</a></li>
+            <li><a href="#">Cardano</a></li>
+            <li><a href="#">Polkadot</a></li>
+            <li><a href="#">Binance Coin</a></li>
+            <li><a href="#">Chainlink</a></li>
+            <li><a href="#">Stellar</a></li>
+            <li><a href="#">Dogecoin</a></li>
+        </ul>
+    </aside>
+    <main>
+        <h2>Cryptocurrency Graphs</h2>
+        <p>A detailed view of the latest trends and price movements in various cryptocurrencies. Below, you can see the graphical representation of the price changes for each cryptocurrency.</p>
+        <div class="graphs">
+            <div class="graph-container">
+                <img src="Bitcoin.jpg" alt="Graph 1">
+                <canvas></canvas>
+            </div>
+            <div class="graph-container">
+                <img src="Ripple.png" alt="Graph 2">
+                <canvas></canvas>
+            </div>
+            <div class="graph-container">
+                <img src="Lite.png" alt="Graph 3">
+                <canvas></canvas>
+            </div>
+            <div class="graph-container">
+                <img src="jaden.jfif" alt="Graph 4">
+                <canvas></canvas>
+            </div>
+            <div class="graph-container">
+                <img src="Doge.png" alt="Graph 5">
+                <canvas></canvas>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price (USD)</th>
+                    <th>24h Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bitcoin</td>
+                    <td>BTC</td>
+                    <td>61,000</td>
+                    <td>+2%</td>
+                </tr>
+                <tr>
+                    <td>Ethereum</td>
+                    <td>ETH</td>
+                    <td>6,000</td>
+                    <td>+1.5%</td>
+                </tr>
+                <tr>
+                    <td>Ripple</td>
+                    <td>XRP</td>
+                    <td>0.50</td>
+                    <td>+3%</td>
+                </tr>
+                <tr>
+                    <td>Litecoin</td>
+                    <td>LTC</td>
+                    <td>150</td>
+                    <td>-0.5%</td>
+                </tr>
+                <tr>
+                    <td>Cardano</td>
+                    <td>ADA</td>
+                    <td>1.20</td>
+                    <td>+0.8%</td>
+                </tr>
+                <tr>
+                    <td>Polkadot</td>
+                    <td>DOT</td>
+                    <td>25</td>
+                    <td>+2.3%</td>
+                </tr>
+                <tr>
+                    <td>Binance Coin</td>
+                    <td>BNB</td>
+                    <td>350</td>
+                    <td>+1.2%</td>
+                </tr>
+                <tr>
+                    <td>Chainlink</td>
+                    <td>LINK</td>
+                    <td>25</td>
+                    <td>+2.5%</td>
+                </tr>
+                <tr>
+                    <td>Stellar</td>
+                    <td>XLM</td>
+                    <td>0.30</td>
+                    <td>+3.1%</td>
+                </tr>
+                <tr>
+                    <td>Dogecoin</td>
+                    <td>DOGE</td>
+                    <td>0.20</td>
+                    <td>+4.5%</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p><img src="logo.png" alt="Logo" class="logo">&copy; Karl Cristobal | Contact us at: <a href="mailto:kcristobal10@yahoo.com">kcristobal10@yahoo.com</a></p>
+
+
+    </footer>
+</body>
+</html>
