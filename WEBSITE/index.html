@@ -104,6 +104,43 @@
         tbody tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+        .signup-form h2 {
+            margin-bottom: 20px;
+        }
+        .signup-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -111,10 +148,11 @@
         <h1><img src="logo.png" alt="Logo" class="logo">CryptoTracker</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li> 
                 <li><a href="#">Login</a></li>
             </ul>
         </nav>
@@ -122,16 +160,16 @@
     <aside>
         <h2>Cryptocurrencies</h2>
         <ul>
-            <li><a href="#">Bitcoin</a></li>
-            <li><a href="#">Ethereum</a></li>
-            <li><a href="#">Ripple</a></li>
-            <li><a href="#">Litecoin</a></li>
-            <li><a href="#">Cardano</a></li>
-            <li><a href="#">Polkadot</a></li>
-            <li><a href="#">Binance Coin</a></li>
-            <li><a href="#">Chainlink</a></li>
-            <li><a href="#">Stellar</a></li>
-            <li><a href="#">Dogecoin</a></li>
+            <li><a href="https://www.tradingview.com/symbols/BTCUSD/" target="_blank">Bitcoin</a></li>
+            <li><a href="https://www.tradingview.com/symbols/ETHUSD/" target="_blank">Ethereum</a></li>
+            <li><a href="https://www.tradingview.com/symbols/XRPUSD/" target="_blank">Ripple</a></li>
+            <li><a href="https://www.tradingview.com/symbols/LTCUSD/" target="_blank">Litecoin</a></li>
+            <li><a href="https://www.tradingview.com/symbols/ADAUSD/" target="_blank">Cardano</a></li>
+            <li><a href="https://www.tradingview.com/symbols/DOTUSD/" target="_blank">Polkadot</a></li>
+            <li><a href="https://www.tradingview.com/symbols/BNBUSD/" target="_blank">Binance Coin</a></li>
+            <li><a href="https://www.tradingview.com/symbols/LINKUSD/" target="_blank">Chainlink</a></li>
+            <li><a href="https://www.tradingview.com/symbols/XLMUSD/" target="_blank">Stellar</a></li>
+            <li><a href="https://www.tradingview.com/symbols/DOGEUSD/" target="_blank">Dogecoin</a></li>
         </ul>
     </aside>
     <main>
@@ -139,23 +177,23 @@
         <p>A detailed view of the latest trends and price movements in various cryptocurrencies. Below, you can see the graphical representation of the price changes for each cryptocurrency.</p>
         <div class="graphs">
             <div class="graph-container">
-                <img src="Bitcoin.jpg" alt="Graph 1">
+                <img src="Bitcoin.jpg" alt="Bitcoin Graph">
                 <canvas></canvas>
             </div>
             <div class="graph-container">
-                <img src="Ripple.png" alt="Graph 2">
+                <img src="Ripple.png" alt="Ripple Graph">
                 <canvas></canvas>
             </div>
             <div class="graph-container">
-                <img src="Lite.png" alt="Graph 3">
+                <img src="Lite.png" alt="Litecoin Graph">
                 <canvas></canvas>
             </div>
             <div class="graph-container">
-                <img src="jaden.jfif" alt="Graph 4">
+                <img src="jaden.jfif" alt="Jaden Graph">
                 <canvas></canvas>
             </div>
             <div class="graph-container">
-                <img src="Doge.png" alt="Graph 5">
+                <img src="Doge.png" alt="Dogecoin Graph">
                 <canvas></canvas>
             </div>
         </div>
@@ -172,70 +210,68 @@
                 <tr>
                     <td>Bitcoin</td>
                     <td>BTC</td>
-                    <td>61,000</td>
+                    <td>$61,000</td>
                     <td>+2%</td>
                 </tr>
                 <tr>
                     <td>Ethereum</td>
                     <td>ETH</td>
-                    <td>6,000</td>
+                    <td>$6,000</td>
                     <td>+1.5%</td>
                 </tr>
                 <tr>
                     <td>Ripple</td>
                     <td>XRP</td>
-                    <td>0.50</td>
+                    <td>$0.50</td>
                     <td>+3%</td>
                 </tr>
                 <tr>
                     <td>Litecoin</td>
                     <td>LTC</td>
-                    <td>150</td>
+                    <td>$150</td>
                     <td>-0.5%</td>
                 </tr>
                 <tr>
                     <td>Cardano</td>
                     <td>ADA</td>
-                    <td>1.20</td>
+                    <td>$1.20</td>
                     <td>+0.8%</td>
                 </tr>
                 <tr>
                     <td>Polkadot</td>
                     <td>DOT</td>
-                    <td>25</td>
+                    <td>$25</td>
                     <td>+2.3%</td>
                 </tr>
                 <tr>
                     <td>Binance Coin</td>
                     <td>BNB</td>
-                    <td>350</td>
+                    <td>$350</td>
                     <td>+1.2%</td>
                 </tr>
                 <tr>
                     <td>Chainlink</td>
                     <td>LINK</td>
-                    <td>25</td>
+                    <td>$25</td>
                     <td>+2.5%</td>
                 </tr>
                 <tr>
                     <td>Stellar</td>
                     <td>XLM</td>
-                    <td>0.30</td>
+                    <td>$0.30</td>
                     <td>+3.1%</td>
                 </tr>
                 <tr>
                     <td>Dogecoin</td>
                     <td>DOGE</td>
-                    <td>0.20</td>
+                    <td>$0.20</td>
                     <td>+4.5%</td>
                 </tr>
             </tbody>
         </table>
     </main>
     <footer>
-        <p><img src="logo.png" alt="Logo" class="logo">&copy; Karl Cristobal | Contact us at: <a href="mailto:kcristobal10@yahoo.com">kcristobal10@yahoo.com</a></p>
-
-
+        <p><img src="logo.png" alt="Logo" class="logo">&copy; 2024 Karl Cristobal | Contact us at: <a href="mailto:kcristobal10@yahoo.com">kcristobal10@yahoo.com</a></p>
     </footer>
 </body>
 </html>
